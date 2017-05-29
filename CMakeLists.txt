@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 
-project(infrastructure)
+project(opencv_demo)
 
 find_package(OpenCV REQUIRED)
 
