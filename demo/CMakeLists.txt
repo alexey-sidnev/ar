@@ -8,6 +8,8 @@ include_directories(../include)
 add_executable(${target} ${CPPS} ${HPPS})
 target_link_libraries(demo code_lib ${OpenCV_LIBS})
 
+add_dependencies(${target} ${target}_lint)
+
 file(GLOB lint_config ${CMAKE_SOURCE_DIR}/CPPLINT.cfg)
 add_custom_target(${target}_lint ALL
                   COMMAND ${LINTING_COMMAND} ${CPPS} ${HPPS}
